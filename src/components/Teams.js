@@ -1,10 +1,27 @@
 import React from "react"
+import TeamRoster from "./TeamRoster";
 
 const Teams = (props)=> {
-    {props.activeTeams.map((team, team_id))}
-    return <div>
-       <h2>{team</h2>
-    </div>
+    return (<h1>Teams</h1>)
+}
+
+
+    //     <div>
+    //       {props.activeTeams.map((team, index) => {
+    //           const {name_display_full, team_id} = team
+    //           let newId = team.name_id
+    //           console.log(team)
+    //         return (
+                
+    //             // <TeamRoster team_id={newId} />
+    //             <h1>{team.name_display_long} : {team.team_id}</h1>
+              
+    //         );
+    //       })}
+    //     </div>
+    //   );
+    // }
+    
 
 
 
@@ -35,6 +52,5 @@ const Teams = (props)=> {
 
     // return activeTeams ? loaded () : loading ()
    
-}
 
 export default Teams
