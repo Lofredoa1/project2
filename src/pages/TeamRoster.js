@@ -1,7 +1,7 @@
 import React from "react"
 
 const TeamRoster = (props) => {
-    <h2>{props.team_id}</h2>
+    return <h2>The team players go here</h2>
 }
 
 export default TeamRoster
