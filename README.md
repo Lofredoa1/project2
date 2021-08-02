@@ -90,16 +90,32 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | --- | :---: |  
 | App | This will make the initial data pull and include React Router| 
 | Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
+| Home | This will be the initial home page and ask for an input year| 
+| Teams | This will render the active MLb teams based on the input year | 
+| Rosters | This will render the active 40 man roster based on the input team | 
+| Player | This will render players stats or projections based on the player selected | 
+| Favorites | This will render a saved list of players | 
+| Footer | This will render the footer | 
 
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evaluate game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Header | H | 2hrs| hrs | hrs |
+| Home page input | H | 1.5hrs| hrs | hrs |
+| Working with API| H | 4hrs| hrs | hrs |
+| Setting up useContext | H | 3hrs| hrs | hrs |
+| Creating component layout | H | 1hr| hrs | hrs |
+| Creating PlayerCard | H | 3hrs| hrs | hrs |
+| PlayerCard styling| H | 2hrs| hrs | hrs |
+| Setting up useContext | H | 3hrs| hrs | hrs |
+| Creating Favorite page interactivity | H | 3hrs| hrs | hrs |
+| MLB logos and styling | H | 2hrs| hrs | hrs |
+| Setting up useContext | H | 3hrs| hrs | hrs |
+| Baseball Diamond layout | H | 4hrs| hrs | hrs |
+| Footer| H | 1hr| hrs | hrs |
+| Total | H | 32.5hrs| hrs | hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
