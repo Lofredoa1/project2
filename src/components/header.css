@@ -1,0 +1,8 @@
+.nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+div a {
+    margin-left: 25px;
+}

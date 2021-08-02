@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Links
 
-## Available Scripts
+- [add your github repo link](https://github.com/Lofredoa1/project2)
+- [add your deployment link](https://project2-six-liard.vercel.app/)
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+This site allows the user to view past hitting or pitching stats for MLB players in a given season defined by the user that are currently on an active MLB roster. This was built on React and allows the user to navigate through different pages in a user friendly manner and has the ability to save a list of favorite players. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The data for this website is being pulled from MLB DATA API which can be referenced [here](https://appac.github.io/mlb-data-api-docs/#top).
 
-### `npm test`
+```
+{
+  "roster_40": {
+    "copyRight": " Copyright 2021 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt  ",
+    "queryResults": {
+      "created": "2021-08-02T11:40:57",
+      "totalSize": "42",
+      "row": [
+	{
+			"position_txt": "RF",
+			"weight": "282",
+			"name_display_first_last": "Aaron Judge",
+			"college": "Fresno State",
+			"height_inches": "7",
+			"starter_sw": "",
+			"jersey_number": "99",
+			"end_date": "",
+			"name_first": "Aaron",
+			"bats": "R",
+			"team_code": "nya",
+			"height_feet": "6",
+			"pro_debut_date": "2016-08-13T00:00:00",
+			"status_code": "A",
+			"primary_position": "9",
+			"birth_date": "1992-04-26T00:00:00",
+			"team_abbrev": "NYY",
+			"throws": "R",
+			"team_name": "New York Yankees",
+			"name_display_last_first": "Judge, Aaron",
+			"name_use": "Aaron",
+			"player_id": "592450",
+			"name_last": "Judge",
+			"team_id": "147",
+			"start_date": "2016-08-13T00:00:00",
+			"name_full": "Judge, Aaron"
+			},
+	}
+  }
+}
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Wireframes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Mobile Design](https://i.imgur.com/d58nBgm.jpg)
+- [Desktop Design](https://i.imgur.com/ew0fjMu.jpg)
+- [React architecture](https://docs.google.com/drawings/d/1xYG-2l2CpgQRnNcieQLyhsVUcwq13ajRplZYhFOy4Ps/edit?usp=sharing)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### MVP/PostMVP - 5min
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### MVP EXAMPLE
+- Pull data with multiple external api calls 
+- Render player stats on page 
+- Allow user to save list of favorite players
+- Clickable components to allow user is able to navigate through the site
+- Header that allows you to switch 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### PostMVP EXAMPLE
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Add ability for user to see projected stats for a selected year
+- Add individual team logos and styling
+- Sort team rosters by position and populate screen like a real baseball diamond
 
-## Learn More
+## Components
+##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Component | Description | 
+| --- | :---: |  
+| App | This will make the initial data pull and include React Router| 
+| Header | This will render the header include the nav | 
+| Footer | This will render the header include the nav | 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-### Analyzing the Bundle Size
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| Total | H | 6hrs| 5hrs | 5hrs |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Additional Libraries
+ Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
 
-### Making a Progressive Web App
+## Code Snippet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
