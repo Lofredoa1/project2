@@ -22,12 +22,12 @@ const Form = (props) => {
                 <input 
                     className="search-bar"
                     type="number"
-                    min="1950"
+                    min="1876"
                     max="2021"
                     placeholder="Year"
                     value={formData}
                     onChange={handleChange}/>
-                <input type="submit" value="submit" />
+                <input className="search-button" type="submit" value="submit" />
             </form>
         </div>
     )

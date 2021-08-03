@@ -1,3 +1,35 @@
-/* .display-year {
-  display: none;
-} */
+/* Home Page Styling */
+.home-title {
+  text-align: center;
+}
+
+.display-year {
+  text-align: center;
+}
+
+.display-amount {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+  /*List of Teams Styling */
+  .team-list {
+    overflow-Y: scroll;
+    height: 50vh;
+    width: 40vh;
+    padding: 10px 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin: 0 auto;
+    background-color: #F4B41A;
+   
+  }
+
+  .team-name {
+   margin: 0;
+   color: #143D59;
+  }
+
+  .list-background {
+    background-color: #DDDDDD;
+  }
