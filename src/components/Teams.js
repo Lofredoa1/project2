@@ -6,9 +6,10 @@ const Teams = (props)=> {
     return (
         <div>
            {props.activeTeams.map((team, index) => {
-            //   const {name_display_full, team_id} = team
             return (
-                <Link to={`/team-rosters`} team_id={team.team_id} >
+                <Link to={{
+                    pathname: `/team-rosters/${team.team_id}`,
+                    state: team.team_id}} key={team.team_id} myKey={team.team_id} >
                     <h2>{team.name_display_full}</h2>
                 </Link>
             );

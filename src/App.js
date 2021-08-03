@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
 import TeamRoster from './pages/TeamRoster';
+import PlayerCard from './components/PlayerCard';
 
 function App() {
 
@@ -14,10 +15,6 @@ const [activeTeams, setActiveTeams] = useState([])
 const [year, setYear] = useState(null)
 //state to store the team Ids
 const [teamID, setTeamID] = useState([])
-
-
-///////////////////////////////////////////////////////////////////// left off here....build a new array while logging each team id on the way. then can use the activeTeams and newArr to match names and ids
-
 
 //new array of team names and Ids
 const newArr = activeTeams.map(team => ({teamName: team.name_display_full, teamId: team.team_id}))
@@ -45,14 +42,13 @@ useEffect(()=> setTeamID(newArr), [activeTeams])
       <Header/>
       <Switch>
         <Route exact path="/">
-          <Home handleSubmit={handleSubmit} activeTeams={activeTeams} />
+          <Home handleSubmit={handleSubmit} activeTeams={activeTeams} year={year}/>
         </Route>
         <Route path="/favorites">
           <Favorites/>
         </Route>
-        <Route path="/team-rosters">
-          <TeamRoster activeTeams={activeTeams} />
-        </Route>
+        <Route path="/team-rosters" render={(props) => <TeamRoster {...props} year={year}/>}/>
+        <Route path="/player-card" render={(props) => <PlayerCard {...props} year={year}/>}/>
       </Switch>
     </div>
   );
