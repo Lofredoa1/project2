@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 
 const Teams = (props)=> {
 
-console.log("what is this?",props.activeTeams)
     return (
         <div>
            {props.activeTeams.map((team, index) => {
