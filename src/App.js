@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
 import TeamRoster from './pages/TeamRoster';
-import PlayerCard from './components/PlayerCard';
+import PlayerCard from './pages/PlayerCard';
 
 function App() {
 

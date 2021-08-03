@@ -103,19 +103,17 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Header | H | 2hrs| hrs | hrs |
-| Home page input | H | 1.5hrs| hrs | hrs |
-| Working with API| H | 4hrs| hrs | hrs |
-| Setting up useContext | H | 3hrs| hrs | hrs |
-| Creating component layout | H | 1hr| hrs | hrs |
+| Home page Form | H | 1.5hrs| hrs | hrs |
+| Home page content | H | 2hrs| hrs | hrs |
+| Working with API | H | 6hrs| hrs | hrs |
+| Creating component pieces | H | 1hr| hrs | hrs |
 | Creating PlayerCard | H | 3hrs| hrs | hrs |
 | PlayerCard styling| H | 2hrs| hrs | hrs |
-| Setting up useContext | H | 3hrs| hrs | hrs |
 | Creating Favorite page interactivity | H | 3hrs| hrs | hrs |
 | MLB logos and styling | H | 2hrs| hrs | hrs |
-| Setting up useContext | H | 3hrs| hrs | hrs |
 | Baseball Diamond layout | H | 4hrs| hrs | hrs |
 | Footer| H | 1hr| hrs | hrs |
-| Total | H | 32.5hrs| hrs | hrs |
+| Total | H | 27.5hrs| hrs | hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
