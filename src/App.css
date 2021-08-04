@@ -15,7 +15,6 @@
 .search-area {
   width: 100%;
   display: block;
-  
   color: black;
 }
 
@@ -54,10 +53,50 @@
   .team-name {
    color: #FFFFFFFF;
    font-family: Arial, Helvetica, sans-serif;
-   border: 3px solid green;
-   margin-bottom: 20px;
-  
-   
+   list-style-type: none;
   }
 
+  /* Roster List Styling */
+.roster-background {
+  margin: 0 10px;
+  background: url("./img/baseball.jpeg");
+  background-size:cover;
+  position: absolute;
+  width: 90%;
+  opacity: 0.7;
+}
+
+.roster-scroll {
+  overflow-Y: scroll;
+  height: 65vh;
+  
+}
+
+.individual-player {
+  border: 5px solid black;
+  padding: 10px;
+  background-color: #2b6777;
+  opacity: 0.8;
+}
+  h1.player-name {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.8em;
+    
+  }
+
+  .initial-stats {
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff;
+  }
+
+  .local-stat{
+    margin-bottom: 0;
+    border-right: 3px solid #ffffff;
+    padding-right: 10px;
+  }
+  .local-stat:last-of-type {
+    border-right: none;
+  }
   

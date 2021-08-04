@@ -16,9 +16,7 @@ const Home = (props)=> {
             </div>
         </div>
         <div className="list-background">
-            <ul>
                 {props.activeTeams.length > 1 ? <Teams activeTeams={props.activeTeams}/> : null}
-            </ul>
         </div>
         </>
     )

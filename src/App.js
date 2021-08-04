@@ -30,7 +30,9 @@ const handleSubmit = async (searchYear) => {
 }
 
 //stores the new team IDs once the active list of teams is called
-useEffect(()=> setTeamID(newArr), [activeTeams])
+useEffect(()=> {
+  console.log("here it is:" ,newArr)
+  setTeamID(newArr)}, [activeTeams])
 
 
   console.log("length", newArr.length)

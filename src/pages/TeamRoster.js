@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import "../App.css"
 
 const TeamRoster = (props) => {
     const [roster, setRoster] = useState([])
@@ -23,17 +24,27 @@ const TeamRoster = (props) => {
       console.log("check me:", roster)
 
 
-    return <div>
+    return <div className="roster-background">
+        <h2 className="roster-title">Active Roster for the {props.year} season.</h2>
+        <div className="roster-scroll">
         
         {roster.map((player, index) => {
             return ( 
                 <Link to={{
                     pathname: `/player-card/${player.player_id}`,
-                    state: player.player_id}} key={player.player_id} myKey={player.player_id} >
-                    <h1>{player.name_first_last} : {player.player_id}</h1>
+                    state: player.player_id}} key={player.player_id} >
+                    <div className="individual-player">
+                        <h1 className="player-name">{player.name_first_last} #{player.jersey_number}</h1>
+                        <div className="initial-stats">
+                            <h3 className="local-stat">Position: {player.primary_position}</h3>
+                            <h3 className="local-stat">Bats: {player.bats}</h3>
+                            <h3 className="local-stat">Throws: {player.throws}</h3>
+                        </div>
+                    </div>
                 </Link>
             );
           })}
+        </div>
     </div>
 
 }
