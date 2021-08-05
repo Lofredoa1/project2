@@ -55,10 +55,10 @@ useEffect(()=> {setTeamID(newArr)}, [activeTeams])
           <Home handleSubmit={handleSubmit} activeTeams={activeTeams} year={year}/>
         </Route>
         <Route path="/favorites">
-          <Favorites favorites={favorites} remove={removeFromFavorites}/>
+          <Favorites favorites={favorites} remove={removeFromFavorites} teamlist={newArr}/>
         </Route>
         <Route path="/team-rosters" render={(props) => <TeamRoster {...props} year={year}/>}/>
-        <Route path="/player-card" render={(props) => <PlayerCard {...props} year={year} addToFavorites={addToFavorites}/>}/>
+        <Route path="/player-card/:playerid" render={(routerProps) => <PlayerCard {...routerProps} year={year} addToFavorites={addToFavorites} favorites={favorites}/>}/>
       </Switch>
     </div>
   );

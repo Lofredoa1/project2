@@ -9,6 +9,7 @@ const Home = (props)=> {
         <>
         <div className="main-area">
             <div className="search-area">
+                <h3 className="home-blurb">Explore the history of the MLB to find your favorite player's career stats.</h3>
                 <h2 className="home-title">Select a Year from 1876 - 2021</h2>
                 <Form handleSubmit={props.handleSubmit} activeTeams={props.activeTeams} />
                 <h3 className="display-year">The Current Active MLB teams for year <span>{props.year}</span></h3>

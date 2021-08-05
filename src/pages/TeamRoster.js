@@ -19,12 +19,12 @@ const TeamRoster = (props) => {
 
       useEffect(()=> getActiveRoster(), [])
 
-     
-
-      console.log("check me:", roster)
 
 
     return <div className="roster-background">
+        <button onClick={() => props.history.goBack()}>
+        Return to Teams
+        </button>
         <h2 className="roster-title">Active Roster for the {props.year} season.</h2>
         <div className="roster-scroll">
         

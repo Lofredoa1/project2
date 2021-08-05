@@ -1,4 +1,10 @@
 /* Home Page Styling */
+.home-blurb {
+  text-align: center;
+  padding:25px 50px 0;
+  margin:0;
+}
+
 .home-title {
   text-align: center;
 }
@@ -40,7 +46,7 @@
 /*List of Teams Styling */
   .team-list {
     overflow-Y: scroll;
-    height: 50vh;
+    height: 45vh;
     width: 40vh;
     padding: 10px 20px;
     margin-bottom: 0;
@@ -59,13 +65,27 @@
 /* Roster List Styling */
 .roster-background {
   margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roster-background button {
+  background-color: #FF4136;
+  height: 30px;
+  font-size: 16px;
+  color: white;
+  margin: 20px 5% 0;
 }
 
 .roster-scroll {
   overflow-Y: scroll;
   height: 75vh;
   width: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .roster-scroll::after {
@@ -90,11 +110,12 @@
   padding: 10px;
   background-color: #2b6777;
   opacity: 0.8;
+  width: 350px;
 }
   h1.player-name {
     margin: 0;
     color: #ffffff;
-    font-size: 1.8em;
+    font-size: 1.7em;
     
   }
 
@@ -115,15 +136,28 @@
 
   /* Player Card Styling */
   .player-card {
-    width: 250px;
+    width: 280px;
     height: 400px;
     border: 5px solid black;
-    margin: 10px auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     background: url("./img/baseball-diamond.jpeg");
     background-size: cover;
     background-position: -140px;
+  }
+
+  .player-card::after {
+    content: "";
+    background: url("./img/baseball-grass.jpeg");
+    background-size:cover;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
   }
 
   .card-header {
@@ -153,7 +187,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 10px 35px;
+    padding: 10px 25px;
     
   }
 
@@ -166,3 +200,17 @@
     grid-template-rows: 1/2;
   }
 
+.card-button {
+  margin: 15px 85px;
+  background-color: #FF4136;
+  height: 30px;
+  font-size: 16px;
+  color: white;
+  width: 200px;
+}
+
+.card-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
