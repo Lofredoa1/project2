@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import logo from "../img/baseball-player-img.jpeg"
 
 const PlayerCard = (props) => {
     const [careerStats, setCareerStats] = useState([])
@@ -18,14 +19,20 @@ const getPlayerDetails = async () => {
   useEffect(()=> getPlayerDetails(), [])
  
 
-    return <div>
-            <h1>{careerStats.player}</h1>
-            <h4>Avg: {careerStats.avg}</h4>
-            <h4>OPS: {careerStats.ops}</h4>
-            <h4>HR: {careerStats.hr}</h4>
-            <h4>RBI: {careerStats.rbi}</h4>
-            <h4>SB: {careerStats.sb}</h4>
+    return (
+        <div className="player-card">
+            <img className="player-img" src={logo}/>
+            <div className="player-stats">
+                <h1>{careerStats.player}</h1>
+                <h4>Avg: {careerStats.avg}</h4>
+                <h4>OPS: {careerStats.ops}</h4>
+                <h4>HR: {careerStats.hr}</h4>
+                <h4>RBI: {careerStats.rbi}</h4>
+                <h4>SB: {careerStats.sb}</h4>
+            </div>
         </div>
+        
+    )
 }
 
 export default PlayerCard

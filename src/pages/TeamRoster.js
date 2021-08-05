@@ -32,7 +32,9 @@ const TeamRoster = (props) => {
             return ( 
                 <Link to={{
                     pathname: `/player-card/${player.player_id}`,
-                    state: player.player_id}} key={player.player_id} >
+                    state: player.player_id}} 
+                    
+                    key={player.player_id} >
                     <div className="individual-player">
                         <h1 className="player-name">{player.name_first_last} #{player.jersey_number}</h1>
                         <div className="initial-stats">
