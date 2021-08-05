@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import {Route, Switch} from "react-router-dom"
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -13,13 +13,8 @@ function App() {
 const [activeTeams, setActiveTeams] = useState([])   
 //using state to track the input year
 const [year, setYear] = useState(null)
-//state to store the team Ids
-const [teamID, setTeamID] = useState([])
 // state to track favorites
 const [favorites, setFavorites] = useState([])
-
-//new array of team names and Ids
-const newArr = activeTeams.map(team => ({teamName: team.name_display_full, teamId: team.team_id}))
 
 //function to add player to favorites
 const addToFavorites = (card) => {
@@ -43,10 +38,6 @@ const handleSubmit = async (searchYear) => {
   setActiveTeams(data.team_all_season.queryResults.row)
 }
 
-//stores the new team IDs once the active list of teams is called
-useEffect(()=> {setTeamID(newArr)}, [activeTeams])
-
-
   return (
     <div className="App">
       <Header/>
@@ -55,7 +46,7 @@ useEffect(()=> {setTeamID(newArr)}, [activeTeams])
           <Home handleSubmit={handleSubmit} activeTeams={activeTeams} year={year}/>
         </Route>
         <Route path="/favorites">
-          <Favorites favorites={favorites} remove={removeFromFavorites} teamlist={newArr}/>
+          <Favorites favorites={favorites} remove={removeFromFavorites} />
         </Route>
         <Route path="/team-rosters" render={(props) => <TeamRoster {...props} year={year}/>}/>
         <Route path="/player-card/:playerid" render={(routerProps) => <PlayerCard {...routerProps} year={year} addToFavorites={addToFavorites} favorites={favorites}/>}/>

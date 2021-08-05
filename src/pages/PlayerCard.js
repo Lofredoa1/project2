@@ -13,7 +13,6 @@ const PlayerCard = (props) => {
             const url = `http://lookup-service-prod.mlb.com/json/named.sport_career_pitching.bam?league_list_id='mlb'&game_type='R'&player_id='${playerID}'`
             const response = await fetch(url)
             const data = await response.json()
-            console.log(data)
             setCareerStats(data.sport_career_pitching.queryResults.row)
         } else {
             const url = `http://lookup-service-prod.mlb.com/json/named.sport_career_hitting.bam?league_list_id='mlb'&game_type='R'&player_id='${playerID}'`
@@ -34,6 +33,7 @@ const PlayerCard = (props) => {
                 <img className="player-img" src={logohitter}/>
                 <h2 className="card-title">{props.location.state.name} #{props.location.state.number}</h2>
                 <div className="handiness">
+                    <h4 style={{margin:0}}>Position: {props.location.state.position}</h4>
                     <h4 style={{margin:0}}>Bats: {props.location.state.bats}</h4>
                     <h4 style={{margin:0}}>Throws: {props.location.state.throws}</h4>
                 </div>
@@ -64,6 +64,7 @@ const PlayerCard = (props) => {
                 <img className="player-img" src={logohitter}/>
                 <h2 className="card-title">{props.location.state.name} #{props.location.state.number}</h2>
                 <div className="handiness">
+                    <h4 style={{margin:0}}>Position: {props.location.state.position}</h4>
                     <h4 style={{margin:0}}>Bats: {props.location.state.bats}</h4>
                     <h4 style={{margin:0}}>Throws: {props.location.state.throws}</h4>
                 </div>

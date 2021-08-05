@@ -13,7 +13,6 @@ const Form = (props) => {
 
     const handleChange = (event) => {
         setFormData(event.target.value)
-        
     }
 
     return (

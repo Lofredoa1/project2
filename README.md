@@ -109,11 +109,11 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Creating component pieces | H | 1hr| 1hrs | hrs |
 | Creating PlayerCard | H | 3hrs| 3hrs | hrs |
 | PlayerCard styling| H | 2hrs| 2hrs | hrs |
-| Creating Favorite page interactivity | H | 3hrs| hrs | hrs |
+| Creating Favorite page interactivity | H | 3hrs| 4hrs | hrs |
 | Images and styling | H | 2hrs| 2hrs | hrs |
 | Baseball Diamond layout | H | 4hrs| hrs | hrs |
 | Footer| H | 1hr| hrs | hrs |
-| Total | H | 27.5hrs| hrs | hrs |
+| Total | H | 27.5hrs| 27.5hrs | hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
