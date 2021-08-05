@@ -13,13 +13,13 @@ const getPlayerDetails = async () => {
     const response = await fetch(url)
     const data = await response.json()
     setCareerStats(data.sport_career_hitting.queryResults.row)
-
   }
 
   useEffect(()=> getPlayerDetails(), [])
  
 
     return (
+        <>
         <div className="player-card">
             <h4 className="card-header">Career Stats</h4>
             <img className="player-img" src={logo}/>
@@ -36,7 +36,14 @@ const getPlayerDetails = async () => {
                 <h4 className="stat5">SLG: {careerStats.slg}</h4>
                 <h4 className="stat6">SB: {careerStats.sb}</h4>
             </div>
+            <button onClick={() => props.addToFavorites(careerStats)}>
+              Add to Favorites
+            </button>
         </div>
+        <button onClick={() => props.history.goBack()}>
+        Go Back to Team Roster
+        </button>
+      </>
         
     )
 }
