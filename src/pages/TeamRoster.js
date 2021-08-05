@@ -4,7 +4,7 @@ import "../App.css"
 
 const TeamRoster = (props) => {
     const [roster, setRoster] = useState([])
-    const storedID = props.location.state;
+    const storedID = props.location.state.teamid;
     console.log("my teams ID is:", storedID)
 
     //API call to get the active roster
@@ -32,9 +32,14 @@ const TeamRoster = (props) => {
             return ( 
                 <Link to={{
                     pathname: `/player-card/${player.player_id}`,
-                    state: player.player_id}} 
-                    
-                    key={player.player_id} >
+                    state: {
+                        playerid: player.player_id,
+                        name: player.name_first_last,
+                        number: player.jersey_number,
+                        position: player.primary_position,
+                        bats: player.bats,
+                        throws: player.throws}}}
+                        key={player.player_id} >
                     <div className="individual-player">
                         <h1 className="player-name">{player.name_first_last} #{player.jersey_number}</h1>
                         <div className="initial-stats">

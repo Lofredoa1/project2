@@ -9,7 +9,10 @@ const Teams = (props)=> {
             return (
                 <Link to={{
                     pathname: `/team-rosters/${team.team_id}`,
-                    state: team.team_id}} key={team.team_id}  >
+                    state: {
+                        teamid: team.team_id,
+                        cat:"vaat"}}}
+                        key={team.team_id}  >
                     <li className="team-name">{team.name_display_full}</li>
                 </Link>
             );
