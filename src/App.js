@@ -31,7 +31,7 @@ const removeFromFavorites = (card) => {
 
 //Function to get the teams for a specified season
 const handleSubmit = async (searchYear) => {
-  const url = `http://lookup-service-prod.mlb.com/json/named.team_all_season.bam?sport_code='mlb'&all_star_sw='N'&sort_order=name_asc&season='${searchYear}'`
+  const url = `https://lookup-service-prod.mlb.com/json/named.team_all_season.bam?sport_code='mlb'&all_star_sw='N'&sort_order=name_asc&season='${searchYear}'`
   const response = await fetch(url)
   setYear(searchYear)
   const data = await response.json()
