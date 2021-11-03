@@ -2,8 +2,8 @@
 
 ## Project Links
 
-- [add your github repo link](https://github.com/Lofredoa1/project2)
-- [add your deployment link](https://project2-six-liard.vercel.app/)
+- [Github repo link](https://github.com/Lofredoa1/project2)
+- [Deployment link](https://project2-six-liard.vercel.app/)
 
 ## Project Description
 
@@ -68,14 +68,14 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-#### MVP EXAMPLE
+#### MVP 
 - Pull data with multiple external api calls 
 - Render player stats on page 
 - Allow user to save list of favorite players
 - Clickable components to allow user is able to navigate through the site
 - Header that allows you to switch 
 
-#### PostMVP EXAMPLE
+#### PostMVP
 
 - Add ability for user to see projected stats for a selected year
 - Add individual team logos and styling
@@ -100,30 +100,38 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evaluate game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Header | H | 2hrs| 1.5hrs | hrs |
-| Home page Form | H | 1.5hrs| 2hrs | hrs |
-| Home page content | H | 2hrs| 4hrs | hrs |
-| Working with API | H | 6hrs| 8hrs | hrs |
-| Creating component pieces | H | 1hr| 1hrs | hrs |
-| Creating PlayerCard | H | 3hrs| 3hrs | hrs |
-| PlayerCard styling| H | 2hrs| 2hrs | hrs |
-| Creating Favorite page interactivity | H | 3hrs| 4hrs | hrs |
-| Images and styling | H | 2hrs| 2hrs | hrs |
-| Baseball Diamond layout | H | 4hrs| hrs | hrs |
-| Footer| H | 1hr| hrs | hrs |
-| Total | H | 27.5hrs| 27.5hrs | hrs |
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: |
+| Header | H | 2hrs| 1.5hrs |
+| Home page Form | H | 1.5hrs| 2hrs |
+| Home page content | H | 3hrs| 3hrs |
+| Working with API | H | 6hrs| 8hrs |
+| Creating component pieces | H | 1hr| 1hr |
+| Creating PlayerCard | H | 3hrs| 2hrs |
+| PlayerCard styling| H | 2hrs| 2hrs |
+| Creating Favorite page interactivity | H | 3hrs| 4hrs |
+| Images and styling | H | 4hrs| 5hrs |
+| Footer| H | 1hr| 1hr |
+| Total | H | 26.5hrs| 29.5hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
+The two functions below allow users to save any players to their favorites page and also allows them to remove any players from their favorites page. 
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+//function to add player to favorites
+const addToFavorites = (card) => {
+  setFavorites([...favorites, card])
+}
+
+//function to remove player from favorites
+const removeFromFavorites = (card) => {
+  const index = favorites.findIndex((info) => card.id === info.id)
+  const updatedArray = [...favorites]
+  updatedArray.splice(index, 1)
+  setFavorites(updatedArray)
 }
 ```
